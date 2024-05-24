@@ -126,22 +126,15 @@ void get_input_data() {
 
 int main() {
     get_input_data();
-    /*
-    while (1) {
-        cin >> x;
-        if (x == 0) break;
-        arr[x] += 1;
-    }
-    Card_Type *p = func();
-    vector<Card_Type *> temp = Card_Type::get_PaiXin(arr, p);
-    for (auto x : temp) x->output() << endl;
-    */
-    vector<Card_Type *> temp1 = Card_Type::get_PaiXinGuan(a, new Pass());
-    vector<Card_Type *> temp2 = Card_Type::get_PaiXinGuan(b, new Pass());
+    //vector<Card_Type *> temp1 = Card_Type::get_PaiXinGuan(a, new Pass());
+    //vector<Card_Type *> temp2 = Card_Type::get_PaiXinGuan(b, new Pass());
+    //vector<Card_Type *> temp1 = Card_Type::get_PaiXin(a) ;
+    //vector<Card_Type *> temp2 = Card_Type::get_PaiXin(b);
     Card_Type::output_arr(a);
-    Card_Type::output_arr(b);
+    //Card_Type::output_arr(b);
+    vector<Card_Type *> temp1 = Card_Type::get_PaiXinGuan(a, func());
     for (auto x : temp1) x->output() << endl;
-    cout << "======================" << endl;
-    for (auto x : temp2) x->output() << endl;
+    //cout << "======================" << endl;
+    //for (auto x : temp2) x->output() << endl;
     return 0;
 }

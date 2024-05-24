@@ -11,12 +11,14 @@
 #include <stack>
 using namespace std;
 
+//创建两个数组进行存储自己和对手的牌
 int a[MAX_N + 5] = {0};
 int b[MAX_N + 5] = {0};
 
 void read(FILE *f, int *arr) {
     int x;
     while (fscanf(f, "%d", &x) != EOF) {
+        //当x等于0时表示读取完成当前一个人的手牌
         if (x == 0) break;
         arr[x] += 1;
     }
@@ -24,9 +26,12 @@ void read(FILE *f, int *arr) {
 }
 
 void get_input_data() {
+    //通过fopen以只读方式打开文件
     FILE *f = fopen("input", "r");
+    //通过f文件指针将手牌读取进自己的对手的手牌
     read(f, a);
     read(f, b);
+    //打开了文件，需要进行关闭
     fclose(f);
     return ;
 }

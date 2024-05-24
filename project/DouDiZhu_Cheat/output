@@ -1,6 +1,0 @@
-g++ -std=c++11 -I./include main.cpp src/get_PaiXin.cc src/contructor_PaiXin.cc src/operator_PaiXin.cc src/other_funcion_PaiXin.cc src/tree.cc -o bin/canju -g             
-./bin/canju
-new node
-get data
-6*1 9*1 10*1 J*1 Q*1 K*1 Ace*1 2*1 
-4*2 7*1 9*1 J*1 K*1 joker*1 JOKER*1 
